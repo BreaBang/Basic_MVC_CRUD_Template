@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Template</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <h1>This is the Home Page</h1>
+    <!-- POST is our Create in the CRUD app.  -->
+    <form action="/new" method="POST">
+        <!-- The name field is what gets passed the server and is very important. -->
+        <!-- Label for Text, the "for" is important -->
+        <label for="textinput">Input Text</label>
+        <!-- This one accepts text -->
+        <input type="text" name="textinput">
+        <!-- Label for Number, the "for" is important -->
+        <label for="numberinput">Input Number</label>
+         <!-- This one accepts numbers -->
+        <input type="number" name="numberinput" value="0">
+        <!-- Button type is submit -->
+        <button type="submit">Add Item</button>
+    </form>
+    <!-- DISPLAY STUFF FROM THE DATA BASE SECTION -->
+    <ul>
+    <!-- EJS -->
+    </ul>
+</body>
+</html>
