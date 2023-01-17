@@ -26,6 +26,14 @@
     <!-- DISPLAY STUFF FROM THE DATA BASE SECTION -->
     <ul>
     <!-- EJS -->
+    <% itemList.forEach(item => { %> <!-- Aligator percent time = logic -->
+        <li>
+            <div><%= item.textinput %></div> <!-- = sign means outputing a string -->
+            <div><%= item.numberinput %></div>
+            <a href="">Edit</a>
+            <a href="">Remove</a>
+        </li>
+        <% })%>
     </ul>
 </body>
 </html>

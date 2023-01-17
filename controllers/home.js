@@ -4,7 +4,7 @@ module.exports = {
     getIndex: async (req, res) => {
         try {
             const items = await ItemList.find() // Taking the entire list of items
-            res.render("index.ejs", {ItemList: items}) // Sending it to index.ejs to render.
+            res.render("index.ejs", {itemList: items}) // Sending it to index.ejs to render.
         } catch (err){
             if(err) return res.status(500).send(err)
         }
