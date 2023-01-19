@@ -20,7 +20,7 @@ connectDB()
 
 //Step 2: Set Middleware
 app.set("view engine", "ejs") // Sets the View Engine to EJS. Our app's display. 
-app.set(express.static("public")) // Files that won't change we'll put in the public folder.
+app.use(express.static("public")) // Files that won't change we'll put in the public folder.
 app.use(express.urlencoded({extended: true})) // Makes sure that our app is handling form information and properly parsing it.
 
 
