@@ -11,6 +11,7 @@ const mongoose = require('mongoose'); // Brining mongoose into use. Mongoose let
 const connectDB = require("./config/database") // Specifying where to get the function - it's in our config folder, the database file.
 //Step 5.3 Tell the server where our router is.
 const homeRoutes = require('./routes/home')
+const editRoutes = require('./routes/edit')
 
 require('dotenv').config({path: './config/.env'}) // Specifying where to get the environment vairables. 
 
@@ -26,7 +27,9 @@ app.use(express.urlencoded({extended: true})) // Makes sure that our app is hand
 //Step 5: Set Routes
 //Step 5.1 - create a folder called routes at the root of the project folder (so not inside another folder)
 //Step 5.2 - create a file called "home.js" (or something else) to handle the initial GET request for the homepage and the POST method for handling new items.
+app.use('/edit', editRoutes) // If the route path starts with /edit, go to our edit routes.
 app.use('/', homeRoutes) // If the route path starts with just a / go to our home routes. 
+
 
 //Step 3: Start Server
 app.listen(PORT, () => console.log(`server running on port ${PORT}`))

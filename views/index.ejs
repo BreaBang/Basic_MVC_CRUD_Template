@@ -30,8 +30,8 @@
         <li>
             <div><%= item.textinput %></div> <!-- = sign means outputing a string -->
             <div><%= item.numberinput %></div>
-            <a href="">Edit</a>
-            <a href="">Remove</a>
+            <a href="/edit/<%= item._id %>">Edit</a>
+            <a href="/edit/remove/<%= item._id %>">Remove</a>
         </li>
         <% })%>
     </ul>
