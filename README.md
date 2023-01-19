@@ -1,3 +1,5 @@
+<img src="preview.mov">
+
 # Basic_MVC_CRUD_Template
 This is a template that was created to review the basics of building a Full-Stack CRUD app. It's based on a tutorial by <a href="https://github.com/Mayanwolfe/Basic_MVC_CRUD_Template" target="_blank">Mayanwolfe</a>. The two part videos walking you through how to create this code from scratch can be found on her youtube or twtich page. 
 
