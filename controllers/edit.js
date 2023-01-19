@@ -9,9 +9,24 @@ module.exports = {
             res.render("edit.ejs", {itemList: items, idItem: id})
         } catch (err){
             if(err) return res.status(500).send(err)
+            res.redirect('/');
         }
     },
    updateItem: async (req, res) =>  {
+    const id = req.params.id
+        try {
+           await ItemList.findByIdAndUpdate(
+            id,
+            {
+            textinput: req.body.textinput,
+            numberinput: req.body.numberinput,
+           },
+        )
+        res.redirect('/')
+    } catch(err){
+        if(err) return res.status(500).send(err)
+        res.redirect('/');
+    }
 
    },
    deleteItem: async (req, res) =>  {
@@ -22,6 +37,7 @@ module.exports = {
             res.redirect('back')
     } catch(err){
         if(err) return res.status(500).send(err)
+        res.redirect('/');
     }
    }
     
