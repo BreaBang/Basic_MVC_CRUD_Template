@@ -1,7 +1,7 @@
 //Step 1: Declare Variables
 const express = require('express'); // Bringing express into use. Express is a javaScript framework used with Node. Node allows us to run javaScript on the computer instead of just in the browser. 
 const app = express(); // Assigning Express to a variable so it's easier to use
-const PORT = 8000; // Local Port
+const PORT = 6000; // Local Port
 const mongoose = require('mongoose'); // Brining mongoose into use. Mongoose let's us talk to our database a little easier and structor our data. 
 
 //Step 4: (After setting up the view and model) - Connect to Database
